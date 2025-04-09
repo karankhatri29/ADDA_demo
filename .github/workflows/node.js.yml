@@ -10,18 +10,17 @@ on:
     branches: [ "main" ]
 
 jobs:
+  
+    
+
   build:
+
     runs-on: windows-latest
+
     steps:
     - name: Greeting
       run: echo "Hello, User!"
       run: echo "Starting Build Process..."
-      
-  build-test:
-
-    runs-on: windows-latest
-
-    steps:
     - uses: actions/checkout@v4
     - name: Use Node.js 20
       uses: actions/setup-node@v4
