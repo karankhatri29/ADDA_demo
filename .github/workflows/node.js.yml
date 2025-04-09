@@ -22,8 +22,13 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+    - name: Clean Install
+      run: |
+        echo "Installing dependencies..."
+        npm ci
+    - run: |
+        echo "Running build..."
+        npm run build --if-present
     - uses: actions/upload-artifact@v4
       if: always()
       with:
