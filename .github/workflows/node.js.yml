@@ -16,7 +16,8 @@ jobs:
     - name: Greeting
       run: echo "Hello, User!"
       run: echo "Starting Build Process..."
-  build:
+      
+  build-test:
 
     runs-on: windows-latest
 
